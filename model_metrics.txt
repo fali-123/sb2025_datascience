@@ -1,0 +1,65 @@
+MODEL METRICS SUMMARY
+Capstone Project: AI-Powered Transaction Intelligence & Financial Coaching System
+
+--------------------------------------------------
+MODEL INFORMATION
+--------------------------------------------------
+
+Model Type: Random Forest Regressor
+
+Target Variable:
+transaction_amount
+
+Training/Test Split:
+80% Training
+20% Testing
+
+--------------------------------------------------
+FINAL MODEL FEATURES
+--------------------------------------------------
+
+age
+month
+day_of_week
+is_expense
+category
+merchant_name
+
+--------------------------------------------------
+PREPROCESSING STEPS
+--------------------------------------------------
+
+Birthdate converted to age
+Transaction dates parsed into month and day_of_week
+Categorical variables encoded using:
+    - One-hot encoding (low-cardinality features)
+    - Frequency encoding (high-cardinality features)
+
+Numerical features scaled using StandardScaler
+
+--------------------------------------------------
+MODEL PARAMETERS
+--------------------------------------------------
+
+n_estimators: 100
+max_depth: None
+min_samples_split: 2
+min_samples_leaf: 1
+bootstrap: True
+random_state: 42
+
+--------------------------------------------------
+MODEL PERFORMANCE
+--------------------------------------------------
+
+R² Score: 0.82
+Mean Absolute Error (MAE): 24.15
+Root Mean Squared Error (RMSE): 36.90
+
+--------------------------------------------------
+MODEL PURPOSE
+--------------------------------------------------
+
+Predict transaction amounts using demographic,
+transaction, and temporal features to support
+future AI-powered financial coaching insights.
